@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #E6E6FA, #D8BFD8);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Heart Styles */
+.heart-wrapper {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.heart-wrapper:hover {
+    transform: scale(1.1);
+}
+
+.heart-icon {
+    fill: #9370DB;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.zoom-out {
+    animation: zoomOut 1.5s forwards;
+}
+
+/* Centered Content */
+.centered-content {
+    text-align: center;
+    max-width: 600px;
+    padding: 2rem;
+    animation: fadeIn 1s ease;
+}
+
+.question-text {
+    font-size: 2.5rem;
+    color: #663399;
+    margin-bottom: 2rem;
+    text-align: center;
+    animation: scaleIn 0.5s ease;
+}
+
+/* Input Styles */
+input[type="text"] {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 2px solid #9370DB;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+/* Love Meter Styles */
+.love-meter {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 15px;
+    -webkit-appearance: none;
+    background: #E6E6FA;
+    border-radius: 10px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #9370DB;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Button Styles */
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.yes-btn, .no-btn, .continue-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.yes-btn {
+    background: #9370DB;
+    color: white;
+}
+
+.no-btn {
+    background: #ff4444;
+    color: white;
+}
+
+/* Floating Hearts */
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Animations */
+@keyframes zoomOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(20);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatingHeart {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+.final-message {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.flowers-text {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 100;
+}
+
+.flowers-text a {
+  color: #9370DB;
+  text-decoration: none;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.flowers-text a:hover {
+  color: #663399;
+  transform: scale(1.05);}
+
+  @keyframes spawnButton {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.spawning-yes {
+    animation: spawnButton 0.5s ease-out forwards;
+}
+
+.no-btn {
+    transition: all 0.3s ease;
+}

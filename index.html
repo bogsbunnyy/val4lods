@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Proposal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Initial Heart -->
+        <div class="step" id="heartStep">
+            <div class="heart-wrapper">
+                <svg viewBox="0 0 24 24" class="heart-icon">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Name Input -->
+        <div class="step hidden" id="nameStep">
+            <div class="centered-content">
+                <h2 class="question-text">Enter your name:</h2>
+                <input type="text" id="nameInput" placeholder="Your name...">
+                <button class="continue-btn">Continue</button>
+            </div>
+        </div>
+
+        <!-- Love Meter -->
+        <div class="step hidden" id="loveMeterStep">
+            <div class="centered-content">
+                <h2 class="question-text">How much do you love your boyfriend?</h2>
+                <div class="love-meter">
+                    <input type="range" id="loveRange" min="0" max="100" value="0">
+                    <div class="love-labels">
+                </div>
+                </div>
+                <p id="loveMessage" class="message"></p>
+                <button class="continue-btn hidden" id="loveContinueBtn">Continue</button>
+            </div>
+        </div>
+
+        <!-- Pre-Valentine Text -->
+        <div class="step hidden" id="preValentineStep">
+            <div class="centered-content">
+                <h2 class="question-text">Well in that case...</h2>
+            </div>
+        </div>
+
+        <!-- Valentine Question -->
+        <div class="step hidden" id="valentineStep">
+            <div class="centered-content">
+                <h2 class="question-text">Will you be my valentine lodicakes? ❤️</h2>
+                <div class="buttons">
+                    <button class="yes-btn">Yes</button>
+                    <button class="no-btn">No</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Message -->
+        <div class="step hidden" id="finalStep">
+            <div class="centered-content final-message">
+                <h1>Thank You for Being My Valentine! ❤️</h1>
+                <p class="personal-message"></p>
+                <p>With all my love,</p>
+                <p>Lodicakes mue</p>
+                <div class="flowers-text">
+                    <a href="flowers.html" target="_blank">Ito muna flowers mo lodicakes q hehehe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="floating-hearts"></div>
+    <script src="script.js"></script>
+</body>
+</html>
